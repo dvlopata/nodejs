@@ -1,0 +1,19 @@
+{
+  "name": "my-nodejs-project",
+  "version": "1.0.0",
+  "description": "My Node.js project",
+  "main": "app.js",
+  "scripts": {
+    "build": "babel app.js -o dist/bundle.js",
+    "start": "node dist/bundle.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
