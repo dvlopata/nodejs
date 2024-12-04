@@ -4,19 +4,19 @@ pipeline {
         stage('Install') {
             steps {
                 echo 'Installing dependencies...'
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Stop all') {
             steps {
                 echo 'Stopping all running instances...'
-                sh 'forever stopall || true'
+                bat 'forever stopall || true'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Starting application...'
-                sh 'BUILD_ID=dontKillMe pm2 start app.js'
+                bat 'BUILD_ID=dontKillMe pm2 start app.js'
             }
         }
     }
